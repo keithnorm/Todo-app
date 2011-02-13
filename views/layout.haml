@@ -1,0 +1,17 @@
+!!!5
+%html
+  %head
+    %title= @title || SiteConfig.title
+    %link{:href => '/css/application.css', :rel => 'stylesheet', :type => 'text/css'}
+  %body
+    #container
+      #header
+        #header_inner.container_12
+          %h1#logo
+            %a{:href => '/'}= SiteConfig.title
+      #content.container_12
+        #content_inner
+          = yield
+      #footer.container_12
+        #footer_inner
+
